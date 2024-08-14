@@ -50,23 +50,23 @@ module.exports = defineConfig({
     },
     {
       name: 'chromium',
-      dependencies: ["sauce-setup"],
+      // dependencies: ["sauce-setup"],
       use: {
         ...devices['Desktop Chrome'],
-        storageState: "./sauce-auth.json",
+        // storageState: "./sauce-auth.json",
         headless: false
       },
     },
 
-    {
-      name: 'firefox',
-      dependencies: ["ecommerce-setup"],
-      use: {
-        ...devices['Desktop Firefox'],
-        storageState: "./ecommerce-auth.json",
-        headless: false
-      },
-    },
+    // {
+    //   name: 'firefox',
+    //   // dependencies: ["ecommerce-setup"],
+    //   use: {
+    //     ...devices['Desktop Firefox'],
+    //     // storageState: "./ecommerce-auth.json",
+    //     headless: false
+    //   },
+    // },
 
     // {
     //   name: 'webkit',
