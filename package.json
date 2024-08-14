@@ -1,0 +1,25 @@
+{
+  "name": "pw",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sample": "npx playwright test sample.spec.js",
+    "sanity": "npx playwright test --grep @sanity",
+    "pom": "npx playwright test --grep @pom",
+    "regression": "npx playwright test --grep @regression",
+    "en": "npx playwright test --grep @env",
+    "store": "npx playwright test storage.spec.js --project=firefox",
+    "sauce": "npx playwright test sauce-storage.spec.js --project=chromium"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.46.0",
+    "@types/node": "^22.2.0"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5"
+  }
+}
