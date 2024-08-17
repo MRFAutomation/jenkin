@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
-const { PageObjects } = require('../Pages/po-manager');
-import data from '../Data/login-data';
+const { PageObjects } = require('../pages/po-manager');
+const data = require('../data/login/LoginData');
 import util from '../utils/util';
 
 test.describe('Sample Describe Block', () => {
@@ -37,16 +37,19 @@ test.describe('Sample Describe Block', () => {
     }); // test three
 
 
-    test('Systems', { tag: '@smoke' }, async ({ page }) => {
-        await page.goto('https://systemsltd.com/PK',
-            {
-                waitUntil: 'networkidle'
-            }
-        );
+    test('Systems',
+        {
+            tag: '@smoke', tag: '@sanity', tag: 'dashboard'
+        }, async ({ page }) => {
+            await page.goto('https://systemsltd.com/PK',
+                {
+                    waitUntil: 'networkidle'
+                }
+            );
 
-        console.log("Pagetitle:", await page.title());
-        await page.waitForTimeout(2000);
-    });
+            console.log("Pagetitle:", await page.title());
+            await page.waitForTimeout(2000);
+        });
 
 
     test('Sauce_Demo Login', { tag: '@regression' }, async () => {

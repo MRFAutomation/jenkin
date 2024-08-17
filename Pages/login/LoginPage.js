@@ -1,4 +1,4 @@
-import data from '../Data/login-data';
+// import data from '../data/login/LoginData';
 class LoginPage {
 
     constructor(page) {

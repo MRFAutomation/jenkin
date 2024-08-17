@@ -1,5 +1,5 @@
 import { test as setup } from '@playwright/test';
-import { PageObjects } from '../Pages/po-manager';
+import { PageObjects } from '../pages/po-manager';
 
 setup('Sauce Login', async ({ page }) => {
     await page.goto(process.env.URL);

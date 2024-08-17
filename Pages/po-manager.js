@@ -1,5 +1,5 @@
-import { LoginPage } from '../Pages/login';
-import { MyAccountPage } from '../Pages/my-account';
+import { LoginPage } from './login/LoginPage';
+import { MyAccountPage } from './my-account';
 class PageObjects {
     constructor(page) {
         this.page = page;

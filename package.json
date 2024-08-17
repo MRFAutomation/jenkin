@@ -10,7 +10,7 @@
     "regression": "npx playwright test --grep @regression",
     "en": "npx playwright test --grep @env",
     "store": "npx playwright test storage.spec.js --project=firefox",
-    "sauce": "npx playwright test sauce-storage.spec.js --project=chromium",
+    "sauce": "npx playwright test SauceStorage.spec.js --project=chromium",
     "example": "npx playwright test example.spec.js"
   },
   "keywords": [],

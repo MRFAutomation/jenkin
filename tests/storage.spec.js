@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
-import data from '../Data/login-data';
-import { MyAccountPage } from '../Pages/my-account';
+import loginData from '../data/login/LoginData';
+import { MyAccountPage } from '../pages/my-account';
 import util from '../utils/util';
 
 test.describe('Sample Describe Block', () => {
@@ -12,7 +12,7 @@ test.describe('Sample Describe Block', () => {
         // await login.gotoLoginPage();
         // await login.loginValidCredentials();
         await page.goto('https://ecommerce-playground.lambdatest.io/index.php?route=account/account');
-        const myAccountElements = page.locator(data.myAccountElementsLocator);
+        const myAccountElements = page.locator(loginData.myAccountElementsLocator);
         const count = await myAccountElements.locator('a').count();
 
         for (let i = 0; i < count; i++) {
