@@ -11,7 +11,8 @@
     "en": "npx playwright test --grep @env",
     "store": "npx playwright test storage.spec.js --project=firefox",
     "sauce": "npx playwright test SauceStorage.spec.js --project=chromium",
-    "example": "npx playwright test example.spec.js"
+    "example": "npx playwright test example.spec.js",
+    "import": "npx playwright test tests/login/Import.spec.js"
   },
   "keywords": [],
   "author": "",
